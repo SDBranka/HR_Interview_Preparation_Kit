@@ -79,7 +79,7 @@ import sys
 # #
 
 def sockMerchant(n, ar):
-    # sort the ar
+    # sort the ar in increasing value
     for i in range(len(ar)):
         min = i
         for j in range(i+1, len(ar)):
@@ -113,16 +113,14 @@ def sockMerchant(n, ar):
 # print(sockMerchant(n, ar))
 # # output = 2
 
-
 # # Example
 # n = 9
 # ar = [10, 20, 20, 10, 10, 30, 50, 10, 20]
 # print("@@@@@2")
 # print(sockMerchant(n, ar))
-
 # output = 3
 
-
+# #2
 # An avid hiker keeps meticulous records of their hikes. During the 
 # last hike that took exactly steps, for every step it was noted if 
 # it was an uphill, U, or a downhill, D step. Hikes always start 
@@ -139,7 +137,6 @@ def sockMerchant(n, ar):
 # and print the number of valleys walked through.
 
 # Example
-
 # steps = 8 path = [DDUUUUDD]
 
 # The hiker first enters a valley 2 units deep. Then they climb 
@@ -153,40 +150,23 @@ def sockMerchant(n, ar):
 #     -string path: a string describing the path
 
 # Returns
-
 #     int: the number of valleys traversed
 
 # Input Format
-
-# The first line contains an integer
-# , the number of steps in the hike.
-# The second line contains a single string , of
-
-# characters that describe the path.
+# The first line contains an integer, the number 
+# of steps in the hike. The second line contains 
+# a single string, of characters that describe the path.
 
 # Constraints
 #  - 2<=steps<=10^6
 # path[i] must be either U or D
 
 # Sample Input
-
 # 8
 # UDDDUDUU
 
 # Sample Output
-
 # 1
-
-
-#!/bin/python3
-
-import math
-import os
-import random
-import re
-import sys
-
-
 
 # Complete the 'countingValleys' function below.
 #
@@ -198,16 +178,21 @@ import sys
 
 def countingValleys(steps, path):
     # Write your code here
-    pos_x = 0
-    
+    pos_y = 0
     times_in_valley = 0
+
     for i in range (len(path)):
+        # if the user moves down decrease the y position user
         if path[i] == "D":
-            pos_x -= 1
+            pos_y -= 1
+        # if the user moves up increase the y position of the user
         else:
-            if pos_x == -1:
+            # if the user goes from below sea level to sea 
+            # level (leaves a valley, thus has been in a valley) 
+            # increase the number of times the user has been in a valley
+            if pos_y == -1:
                 times_in_valley += 1
-            pos_x += 1
+            pos_y += 1
 
     return times_in_valley
 
@@ -216,7 +201,7 @@ def countingValleys(steps, path):
 # Example
 # steps = 8 path = [DDUUUUDD]
 steps = 8
-# path = "DDUUUUDD"
+path = "DDUUUUDD"
 # path = "UDDDUDUU"
 # path = ["D", "D", "U", "U", "U", "U", "D", "D"]
 print(countingValleys(steps, path))
