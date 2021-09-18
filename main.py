@@ -5,6 +5,7 @@ import re
 import sys
 
 
+#  #1
 # There is a large pile of socks that must be paired by color.
 # Given an array of integers representing the color of each sock, 
 # determine how many pairs of socks with matching colors there are.
@@ -23,23 +24,23 @@ import sys
 
 # sockMerchant has the following parameter(s):
 
-#     int n: the number of socks in the pile
-#     int ar[n]: the colors of each sock
+#     -int n: the number of socks in the pile
+#     -int ar[n]: the colors of each sock
 
 # Returns
 
-#     int: the number of pairs
+#     -int: the number of pairs
 
 # Input Format
 
-# The first line contains an integer
-# , the number of socks represented in .
-# The second line contains space-separated integers, , the colors of the socks in the pile.
+# The first line contains an integer n, the number of socks represented 
+# in ar. The second line contains n space-separated integers, ar[i], 
+# the colors of the socks in the pile.
 
 # Constraints
 
-# -1<=n<=100
-# 1<=ar[i]<=100 where 0<=i<=n
+# -1 <= n <= 100
+# 1 <= ar[i] <= 100 where 0 <= i <= n
 
 # Sample Input
 
@@ -52,10 +53,7 @@ import sys
 
 # 3
 
-
-
 # Example
-
 # n = 7
 # ar = [1, 2, 1, 2, 1, 3, 2]
 # output = 2
@@ -67,16 +65,13 @@ import sys
 # output = 3
 
 
-#!/bin/python3
-
-# #
-# # Complete the 'sockMerchant' function below.
-# #
-# # The function is expected to return an INTEGER.
-# # The function accepts following parameters:
-# #  1. INTEGER n
-# #  2. INTEGER_ARRAY ar
-# #
+# Complete the 'sockMerchant' function below.
+#
+# The function is expected to return an INTEGER.
+# The function accepts following parameters:
+#  1. INTEGER n
+#  2. INTEGER_ARRAY ar
+#
 
 def sockMerchant(n, ar):
     # sort the ar in increasing value
@@ -114,10 +109,10 @@ def sockMerchant(n, ar):
 # # output = 2
 
 # # Example
-# n = 9
-# ar = [10, 20, 20, 10, 10, 30, 50, 10, 20]
-# print("@@@@@2")
-# print(sockMerchant(n, ar))
+n = 9
+ar = [10, 20, 20, 10, 10, 30, 50, 10, 20]
+print("###sockMerchant###")
+print(sockMerchant(n, ar))
 # output = 3
 
 # #2
@@ -158,7 +153,7 @@ def sockMerchant(n, ar):
 # a single string, of characters that describe the path.
 
 # Constraints
-#  - 2<=steps<=10^6
+#  - 2 <= steps <= 10^6
 # path[i] must be either U or D
 
 # Sample Input
@@ -169,7 +164,6 @@ def sockMerchant(n, ar):
 # 1
 
 # Complete the 'countingValleys' function below.
-#
 # The function is expected to return an INTEGER.
 # The function accepts following parameters:
 #  1. INTEGER steps
@@ -204,5 +198,6 @@ steps = 8
 path = "DDUUUUDD"
 # path = "UDDDUDUU"
 # path = ["D", "D", "U", "U", "U", "U", "D", "D"]
+print("###CountingValleys###")
 print(countingValleys(steps, path))
 
