@@ -1,2 +1,2 @@
 Challenges from:
-https://www.hackerrank.com/interview/interview-preparation-kit/warmup/challenges
+https://www.hackerrank.com/interview/interview-preparation-kit

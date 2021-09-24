@@ -364,27 +364,19 @@ c = [0, 0, 1, 0, 0, 1, 0]
 # Sample Input
 
 # Sample Input 0
-
 # aba
 # 10
-
 # Sample Output 0
-
 # 7
-
 # Explanation 0
 # The first n = 10 letters of the infinite string are 
 # abaabaabaa. Because there are 7 a's, we return 7.
 
 # Sample Input 1
-
 # a
 # 1000000000000
-
 # Sample Output 1
-
 # 1000000000000
-
 # Explanation 1
 # Because all of the first n = 1000000000000 letters 
 # of the infinite string are a, we return 1000000000000
@@ -461,5 +453,5 @@ n = 3
 # Output
 # 2
 
-print("###repeatedString###")
-print(repeatedString(s, n))
+# print("###repeatedString###")
+# print(repeatedString(s, n))
