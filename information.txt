@@ -1,2 +1,5 @@
 Challenges from:
 https://www.hackerrank.com/interview/interview-preparation-kit
+
+Highlights
+-optimized array left rotation (#2 arrays.py)
