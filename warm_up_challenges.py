@@ -5,7 +5,8 @@ import re
 import sys
 
 
-#  #1
+#  #1 Sales by Match
+# https://www.hackerrank.com/challenges/sock-merchant/problem
 # There is a large pile of socks that must be paired by color.
 # Given an array of integers representing the color of each sock, 
 # determine how many pairs of socks with matching colors there are.
@@ -41,7 +42,6 @@ import sys
 # -----                       --------
 # 9                           n = 9
 # 10 20 20 10 10 30 50 10 20  ar = [10, 20, 20, 10, 10, 30, 50, 10, 20]
-
 # Sample Output
 # 3
 
@@ -50,19 +50,16 @@ import sys
 # ar = [1, 2, 1, 2, 1, 3, 2]
 # output = 2
 
-
 # Example
 # n = 9
 # ar = [10, 20, 20, 10, 10, 30, 50, 10, 20]
 # output = 3
-
 
 # Complete the 'sockMerchant' function below.
 # The function is expected to return an INTEGER.
 # The function accepts following parameters:
 #  1. INTEGER n
 #  2. INTEGER_ARRAY ar
-#
 
 def sockMerchant(n, ar):
     # sort the ar in increasing value
@@ -92,21 +89,10 @@ def sockMerchant(n, ar):
     
     return pairs_of_socks
 
-# # Example
-# n = 7
-# ar = [1, 2, 1, 2, 1, 3, 2]
-# print("@@@@@1")
-# print(sockMerchant(n, ar))
-# # output = 2
 
-# # Example
-n = 9
-ar = [10, 20, 20, 10, 10, 30, 50, 10, 20]
-# print("###sockMerchant###")
-# print(sockMerchant(n, ar))
-# output = 3
 
-# #2
+# #2 Counting Valleys
+# https://www.hackerrank.com/challenges/counting-valleys
 # An avid hiker keeps meticulous records of their hikes. During the 
 # last hike that took exactly steps, for every step it was noted if 
 # it was an uphill, U, or a downhill, D step. Hikes always start 
@@ -150,7 +136,6 @@ ar = [10, 20, 20, 10, 10, 30, 50, 10, 20]
 # Sample Input
 # 8
 # UDDDUDUU
-
 # Sample Output
 # 1
 
@@ -159,7 +144,6 @@ ar = [10, 20, 20, 10, 10, 30, 50, 10, 20]
 # The function accepts following parameters:
 #  1. INTEGER steps
 #  2. STRING path
-#
 
 def countingValleys(steps, path):
     # Write your code here
@@ -183,19 +167,8 @@ def countingValleys(steps, path):
 
 
 
-# Example
-# steps = 8 path = [DDUUUUDD]
-steps = 8
-path = "DDUUUUDD"
-# path = "UDDDUDUU"
-# path = ["D", "D", "U", "U", "U", "U", "D", "D"]
-# print("###CountingValleys###")
-# print(countingValleys(steps, path))
-
-
-
-# #3
-# Jumping on the Clouds
+# #3 Jumping on the Clouds
+# https://www.hackerrank.com/challenges/jumping-on-the-clouds/problem
 # There is a new mobile game that starts with consecutively 
 # numbered clouds. Some of the clouds are thunderheads and others 
 # are cumulus. The player can jump on any cumulus cloud having a 
@@ -263,12 +236,10 @@ path = "DDUUUUDD"
 # in 3 jumps:
 
 # Complete the 'jumpingOnClouds' function below.
-#
 # The function is expected to return an INTEGER.
 # The function accepts INTEGER_ARRAY c as parameter.
 
 def jumpingOnClouds(c):
-
     position = 0
     jumps = 0
     while position < len(c)-1:
@@ -282,45 +253,15 @@ def jumpingOnClouds(c):
     return jumps
 
 
-# Input
-# c = [0, 1, 0, 0, 0, 1, 0]
-# Output
-# 3
 
-# Input
-# c = [0, 0, 1, 0, 0, 1, 0]
-# Output
-# 4
-
-# Input
-# c = [0, 0, 0, 0, 1, 0]
-# Output
-# 3
-
-# Input
-# c = [0, 0, 0, 1, 0, 0]
-# Output
-# 3
-
-# Input
-c = [0, 0, 1, 0, 0, 1, 0]
-# Output
-# 4
-
-
-# print("###jumpingOnClouds###")
-# print(jumpingOnClouds(c))
-
-
-
-# #4
+# #4 Repeated String
+# https://www.hackerrank.com/challenges/repeated-string/problem
 # There is a string, s, of lowercase English letters that 
 # is repeated infinitely many times. Given an integer, n, 
 # find and print the number of letter a's in the first n 
 # letters of the infinite string.
 
 # Example
-
 # s = 'abcac'
 # n = 10
 
@@ -329,20 +270,15 @@ c = [0, 0, 1, 0, 0, 1, 0]
 # of a in the substring.
 
 # Function Description
-
 # Complete the repeatedString function in the editor below.
-
 # repeatedString has the following parameter(s):
-
 #     s: a string to repeat
 #     n: the number of characters to consider
 
 # Returns
-
 #     int: the frequency of a in the substring
 
 # Input Format
-
 # The first line contains a single string, s.
 # The second line contains an integer, n.
 
@@ -350,8 +286,6 @@ c = [0, 0, 1, 0, 0, 1, 0]
 #      1 <= |s| <= 100
 #      1 <= n <= 10^12
 #      For 25% of the test cases, n <= 10^6.
-
-# Sample Input
 
 # Sample Input 0
 # aba
@@ -403,43 +337,3 @@ def repeatedString(s, n):
                 if s[letter] == 'a':
                     count += 1
     return count
-
-
-# Input:
-# s = 'abcac'
-# n = 10
-# Output:
-# 4
-
-# Input:
-# s = 'aba'
-# n = 10
-# Output 0
-# 7
-
-#Input
-# s = 'a'
-# n = 1000000000000
-# Output
-# 1000000000000
-
-# Input
-# s = 'x'
-# n = '21342424'
-# Output
-# 0
-
-# Input
-# s = 'kmretasscityylpdhuwjirnqimlkcgxubxmsxpypgzxtenweirknjtasxtvxemtwxuarabssvqdnktqadhyktagjxoanknhgilnm'
-# n = 736778906400
-# Output
-# 51574523448
-
-# Input
-s = 'ababa'
-n = 3
-# Output
-# 2
-
-# print("###repeatedString###")
-# print(repeatedString(s, n))

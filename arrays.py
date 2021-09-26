@@ -5,8 +5,8 @@ import re
 import sys
 
 #  #1 2D Array - DS
+# https://www.hackerrank.com/challenges/2d-array
 # Given a 6x6 2D Array, arr:
-
 # 1 1 1 0 0 0
 # 0 1 0 0 0 0
 # 1 1 1 0 0 0
@@ -14,19 +14,16 @@ import sys
 # 0 0 0 0 0 0
 # 0 0 0 0 0 0
 
-# An hourglass in A is a subset of 
-# values with indices falling in this 
-# pattern in arr's graphical representation:
-
+# An hourglass in A is a subset of values with indices 
+# falling in this pattern in arr's graphical representation:
 # a b c
 #   d
 # e f g
 
-# There are 16 hourglasses in arr. An 
-# hourglass sum is the sum of an hourglass' 
-# values. Calculate the hourglass sum for 
-# every hourglass in , then print the maximum 
-# hourglass sum. The array will always be 6 x 6.
+# There are 16 hourglasses in arr. An hourglass sum is the sum
+# of an hourglass' values. Calculate the hourglass sum for 
+# every hourglass in , then print the maximum hourglass sum. 
+# The array will always be 6 x 6.
 
 # Example
 # arr = 
@@ -38,7 +35,6 @@ import sys
 #  0  0  1  2 4 0
 
 # The 16 hourglass sums are:
-
 # -63, -34, -9, 12, 
 # -10,   0, 28, 23, 
 # -27, -11, -2, 10, 
@@ -46,7 +42,6 @@ import sys
 
 # The highest hourglass sum is 28 from 
 # the hourglass beginning at row 1, column 2:
-
 # 0 4 3
 #   1
 # 8 6 6
@@ -56,12 +51,8 @@ import sys
 # wish to skip this challenge.
 
 # Function Description
-
-# Complete the function hourglassSum in 
-# the editor below. 
-
+# Complete the function hourglassSum in the editor below. 
 # hourglassSum has the following parameter(s):
-
 #     int arr[6][6]: an array of integers
 
 # Returns
@@ -145,48 +136,22 @@ def hourglassSum(arr):
 
     return max_sum
 
-# Example
-# arr = [
-#         [-9, -9, -9, 1, 1, 1],
-#         [0, -9, 0, 4, 3, 2],
-#         [-9, -9, -9, 1, 2, 3],
-#         [0, 0, 8, 6, 6, 0],
-#         [0, 0, 0, -2, 0, 0],
-#         [0, 0, 1, 2, 4, 0]
-#         ]
-# Output
-# 28
-
-# example
-arr = [[-1, -1, 0, -9, -2, -2],
-        [-2, -1, -6, -8, -2, -5],
-        [-1, -1, -1, -2, -3, -4,],
-        [-1, -9, -2, -4, -4, -5],
-        [-7, -3, -3, -2, -9, -9],
-        [-1, -3, -1, -2, -4, -5]]
-# Output
-# -6
-
-# print(hourglassSum(arr))
 
 
 # #2 Arrays: Left Rotation
-# A left rotation operation on an array shifts 
-# each of the array's elements 1 unit to the left.
-# For example, if 2 left rotations are performed on 
-# array [1, 2, 3, 4, 5], then the array would 
-# become [3, 4, 5, 1, 2]. Note that the lowest 
-# index item moves to the highest index in a 
-# rotation. This is called a circular array.
+# https://www.hackerrank.com/challenges/ctci-array-left-rotation
+# A left rotation operation on an array shifts each of the array's 
+# elements 1 unit to the left. For example, if 2 left rotations 
+# are performed on array [1, 2, 3, 4, 5], then the array would 
+# become [3, 4, 5, 1, 2]. Note that the lowest index item moves 
+# to the highest index in a rotation. This is called a circular array.
 
-# Given an array a of n integers and a number, d, 
-# perform d left rotations on the array. Return 
-# the updated array to be printed as a single 
-# line of space-separated integers.
+# Given an array a of n integers and a number, d, perform d left 
+# rotations on the array. Return the updated array to be printed
+#  as a single line of space-separated integers.
 
 # Function Description
 # Complete the function rotLeft in the editor below.
-
 # rotLeft has the following parameter(s):
 #     int a[n]: the array to rotate
 #     int d: the number of rotations
@@ -196,10 +161,8 @@ arr = [[-1, -1, 0, -9, -2, -2],
 
 # Input Format
 # The first line contains two space-separated integers
-# n and d, the size of a and the number of left 
-# rotations.
-# The second line contains space-separated 
-# integers, each an a[i].
+# n and d, the size of a and the number of left rotations.
+# The second line contains space-separated integers, each an a[i].
 
 # Constraints
 # 1 <= n <= 10^5
@@ -241,15 +204,9 @@ def rotLeft(a, d):
     return a
 
 
-# Sample Input
-d = 4
-a = [1, 2, 3, 4, 5]
-# Sample Output
-# 5 1 2 3 4
-
-# print(rotLeft(a, d))
 
 # # 3 New Year Chaos
+# https://www.hackerrank.com/challenges/new-year-chaos/problem?h_l=interview&playlist_slugs%5B%5D=interview-preparation-kit&playlist_slugs%5B%5D=arrays&h_r=next-challenge&h_v=zen
 # It is New Year's Day and people are in line for the 
 # Wonderland rollercoaster ride. Each person wears a 
 # sticker indicating their initial position in the queue 
@@ -343,8 +300,6 @@ a = [1, 2, 3, 4, 5]
 # person 5 has done so. It is not possible to achieve 
 # the input state.
 
-
-
 def minimumBribes(q):
     num_of_moves = 0
     for x in range(len(q)):
@@ -356,41 +311,3 @@ def minimumBribes(q):
                 num_of_moves += 1
 
     return num_of_moves
-
-q = [1, 2, 3, 5, 4, 6, 7, 8]
-# Output
-# 1
-
-# q = [4, 1, 2, 3 ]
-# Output
-# Too chaotic.
-
-# qt = [1, 0, 4, 2, 3]
-# q = [2, 1, 5, 3, 4]
-# Output
-# 3
-
-# q = [2, 5, 1, 3, 4]
-# Output
-# Too chaotic
-
-# q = [5, 1, 2, 3, 7, 8, 6, 4]
-# Output
-# Too chaotic
-
-# r = [0, 1, 4, 2, 6, 7, 5, 3]
-# q = [1, 2, 5, 3, 7, 8, 6, 4]
-# Output
-# 7
-
-# q = [1, 2, 5, 3, 4, 7, 8, 6]
-# Output
-# 4
-
-# q = [2, 3, 5, 4, 6, 7, 8, 1]
-# Output
-# 
-
-
-print(minimumBribes(q))
-
