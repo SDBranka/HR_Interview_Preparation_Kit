@@ -1,4 +1,6 @@
 import unittest
+import sys
+sys.path.append("..")
 from warm_up_challenges import jumpingOnClouds
 
 class test_jumpingOnClouds(unittest.TestCase):

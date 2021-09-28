@@ -1,4 +1,6 @@
 import unittest
+import sys
+sys.path.append("..")
 from warm_up_challenges import repeatedString
 
 class test_repeatedString(unittest.TestCase):

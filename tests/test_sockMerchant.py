@@ -1,4 +1,6 @@
 import unittest
+import sys
+sys.path.append("..")
 from warm_up_challenges import sockMerchant
 
 class test_countingValleys(unittest.TestCase):

@@ -1,4 +1,6 @@
 import unittest
+import sys
+sys.path.append("..")
 from arrays import minimumBribes
 
 class test_minimumBribes(unittest.TestCase):

@@ -1,4 +1,6 @@
 import unittest
+import sys
+sys.path.append("..")
 from arrays import hourglassSum
 
 class test_hourglassSum(unittest.TestCase):

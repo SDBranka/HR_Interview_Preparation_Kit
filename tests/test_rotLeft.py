@@ -1,4 +1,6 @@
 import unittest
+import sys
+sys.path.append("..")
 from arrays import rotLeft
 
 class test_rotLeft(unittest.TestCase):
